@@ -1,9 +1,16 @@
 import { useState } from 'react'
 import { fetchWeatherWithCity, fetchWeatherWithCoords, LocationInfo } from './api';
-
+import SearchBar from './components/SearchBar.jsx'
 function App() {
+   const handleSubmit = () => {
+
+   };
  return(
-    <h1>Hello</h1>
+   <div>
+      <h1>Hello</h1>
+      <SearchBar handelSubmit={handleSubmit}></SearchBar>
+   </div>
+
  );
 }
 

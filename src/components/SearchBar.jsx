@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import {fetchWeatherWithCity, fetchWeatherWithCoords, LocationInfo} from '../Api.js'
 
-const WeatherSearch = (handleSubmit) => {
+const SearchBar = ({handleSubmit}) => {
   const [city, setCity] = useState('');
   const [locationSuggestions, setLocationSuggestions] = useState([]);
 
-  const handleSearchInput = async () => {
-
+  // Handles search input changes
+  const handleSearchInput = async (e) => {
+    const input = e.target.value;
+    setCity(input);
+    
+    const locations = await LocationInfo(input);
+    setLocationSuggestions(locations);
   };
+
 
   const handleSelectLocation = async () => {
 
@@ -36,4 +42,4 @@ const WeatherSearch = (handleSubmit) => {
   );
 };
 
-export default WeatherSearch;
+export default SearchBar;
