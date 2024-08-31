@@ -14,9 +14,9 @@ const SearchBar = ({handleSubmit}) => {
     setLocationSuggestions(locations);
   };
 
-
+  //Handle user clicking on location
   const handleSelectLocation = async () => {
-
+    
   };
 
   return (
@@ -26,14 +26,16 @@ const SearchBar = ({handleSubmit}) => {
             type="text" 
             value={city} 
             onChange={handleSearchInput} 
-            placeholder="Enter Location (City, [State/Province], Country Code)" 
+            placeholder="Enter in a City" 
         />
         <button onClick={handleSubmit}>Search</button>
       </div>
       <ul className="locationSuggestions">
         {locationSuggestions.map((location, index) => (
           <li className="suggestionElement" key={index} onClick={() => handleSelectLocation(location)}>
-            {location.name}, {location.state}, {location.country}
+              {location.name}
+              {location.state ? `, ${location.state}` : ''}
+              , {location.country}
           </li>
         ))}
       </ul>
