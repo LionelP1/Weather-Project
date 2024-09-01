@@ -3,6 +3,7 @@ import { fetchWeatherWithCity, fetchWeatherWithCoords, LocationInfo } from './ap
 import TodayWeather from './components/TodayWeather.jsx';
 import OtherInfo from './components/OtherInfo.jsx';
 import Header from './components/Header.jsx';
+import './styles/App.css';
 
 const App = () => {
   const defaultCity = 'New York';
@@ -61,7 +62,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div id="app">
       <Header
         city={city}
         locationSuggestions={locationSuggestions}
