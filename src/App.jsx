@@ -1,25 +1,27 @@
-import React, { useState } from 'react';
-import SearchBar from './SearchBar';
-import TodayWeather from './TodayWeather';
-import OtherInfo from './OtherInfo';
-import Header from './Header';
-
-import { fetchWeatherWithCity, LocationInfo } from '../Api.js';
+import { useState, useEffect } from 'react';
+import { fetchWeatherWithCity, fetchWeatherWithCoords, LocationInfo } from './api';
+import TodayWeather from './components/TodayWeather.jsx';
+import OtherInfo from './components/OtherInfo.jsx';
+import Header from './components/Header.jsx';
 
 const App = () => {
-  const [city, setCity] = useState('');
+  const defaultCity = 'New York';
+  const [city, setCity] = useState(defaultCity);
   const [weatherData, setWeatherData] = useState(null);
   const [locationSuggestions, setLocationSuggestions] = useState([]);
 
-  const handleCityChange = async (newCity) => {
-    setCity(newCity);
-    try {
-      const data = await fetchWeatherWithCity(newCity);
-      setWeatherData(data);
-    } catch (error) {
-      console.error('Error fetching weather data:', error);
-    }
-  };
+  useEffect(() => {
+    const fetchWeather = async () => {
+      try {
+        const data = await fetchWeatherWithCity(defaultCity);
+        setWeatherData(data);
+      } catch (error) {
+        console.error('Error fetching weather data:', error);
+      }
+    };
+
+    fetchWeather();
+  }, []);
 
   const handleSearchSubmit = async () => {
     if (city) {
@@ -45,7 +47,7 @@ const App = () => {
   const handleSelectLocation = async (location) => {
     setCity(location.name);
     try {
-      const data = await fetchWeatherWithCity(location.name);
+      const data = await fetchWeatherWithCoords(location.latitude, location.longitude);
       setWeatherData(data);
       setLocationSuggestions([]);
     } catch (error) {
@@ -55,8 +57,24 @@ const App = () => {
 
   return (
     <div>
+      <Header
+        city={city}
+        locationSuggestions={locationSuggestions}
+        handleSearchInput={handleSearchInput}
+        handleSearchSubmit={handleSearchSubmit}
+        handleSelectLocation={handleSelectLocation}
+      />
+      {weatherData && (
+        <>
+          <TodayWeather weatherData={weatherData} />
+          <OtherInfo weatherData={weatherData} />
+        </>
+      )}
+
     </div>
   );
 };
 
 export default App;
+
+
