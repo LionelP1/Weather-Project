@@ -1,0 +1,13 @@
+:root {
+    /* CSS Variables */
+    --lighter-black: #31363a;
+    --darker-black: #242526;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--lighter-black);
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+}

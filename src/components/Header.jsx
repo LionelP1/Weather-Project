@@ -1,12 +1,20 @@
 import React from 'react';
 import SearchBar from './SearchBar';
+import '../styles/Header.css';
 
-const Header = ({ city, locationSuggestions, handleSearchInput, handleSearchSubmit, handleSelectLocation, toggleUnit }) => {
-
+const Header = ({ city, locationSuggestions, handleSearchInput, handleSearchSubmit, handleSelectLocation, setUnit }) => {
+    const changeUnitCelsius = () => {
+        setUnit('C');
+    };
+    
+    const changeUnitFahrenheit = () => {
+        setUnit('F');
+    };
 
     return (
         <div className="header">
-            <img className="logo" alt="Logo"/>
+            <img className="logo" alt="Logo" />
+            <h1 className="title">Weather Project</h1>
             <SearchBar 
                 city={city}
                 locationSuggestions={locationSuggestions}
@@ -14,8 +22,10 @@ const Header = ({ city, locationSuggestions, handleSearchInput, handleSearchSubm
                 handleSubmit={handleSearchSubmit}
                 handleSelectLocation={handleSelectLocation}
             />
-            <button className="celsiusBtn" onClick={toggleUnit}>°C</button>
-            <button className="fahrenheiBtn" onClick={toggleUnit}>°F</button>
+            <div className="unit-buttons">
+                <button className="celsiusBtn" onClick={changeUnitCelsius}>°C</button>
+                <button className="fahrenheiBtn" onClick={changeUnitFahrenheit}>°F</button>
+            </div>
         </div>
     );
 };

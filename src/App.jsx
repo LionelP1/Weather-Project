@@ -57,10 +57,6 @@ const App = () => {
     }
   };
 
-  const toggleUnit = () => {
-    setUnit((prevUnit) => (prevUnit === 'C' ? 'F' : 'C'));
-  };
-
   return (
     <div id="app">
       <Header
@@ -69,7 +65,7 @@ const App = () => {
         handleSearchInput={handleSearchInput}
         handleSearchSubmit={handleSearchSubmit}
         handleSelectLocation={handleSelectLocation}
-        toggleUnit={toggleUnit}
+        setUnit={setUnit}
       />
       {weatherData && (
       <>
