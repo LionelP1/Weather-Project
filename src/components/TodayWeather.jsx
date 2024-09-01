@@ -4,7 +4,15 @@ const TodayWeather = ({ weatherData }) => {
   const {
     weather,
     main: { temp, feels_like },
+    sys: { country },
+    name
   } = weatherData;
+
+  // const {
+  //   weather,
+  //   main: { temp, feels_like },
+  // } = weatherData;
+
 
   const now = new Date();
   const date = now.toLocaleDateString(undefined, {
@@ -30,6 +38,7 @@ const TodayWeather = ({ weatherData }) => {
 
       <p className="temperature">{temp.toFixed(1)}</p>
       <p className="feelsTemp">Feels like: {feels_like.toFixed(1)}</p>
+      <p className="location">{name}, {country}</p>
       <p className="date">{date}</p>
       <p className="time">{time}</p>
     </div>
