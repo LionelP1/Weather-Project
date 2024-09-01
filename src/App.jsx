@@ -30,6 +30,7 @@ const App = () => {
       try {
         const data = await fetchWeatherWithCity(city);
         setWeatherData(data);
+        setLocationSuggestions([]);
       } catch (error) {
         console.error('Error fetching weather data:', error);
       }
