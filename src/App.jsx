@@ -9,6 +9,7 @@ const App = () => {
   const [city, setCity] = useState(defaultCity);
   const [weatherData, setWeatherData] = useState(null);
   const [locationSuggestions, setLocationSuggestions] = useState([]);
+  const [unit, setUnit] = useState('C');
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -55,6 +56,10 @@ const App = () => {
     }
   };
 
+  const toggleUnit = () => {
+    setUnit((prevUnit) => (prevUnit === 'C' ? 'F' : 'C'));
+  };
+
   return (
     <div>
       <Header
@@ -63,12 +68,14 @@ const App = () => {
         handleSearchInput={handleSearchInput}
         handleSearchSubmit={handleSearchSubmit}
         handleSelectLocation={handleSelectLocation}
+        toggleUnit={toggleUnit}
       />
       {weatherData && (
-        <>
-          <TodayWeather weatherData={weatherData} />
-          <OtherInfo weatherData={weatherData} />
-        </>
+      <>
+        <TodayWeather weatherData={weatherData} unit={unit}/>
+        <OtherInfo weatherData={weatherData} />
+      </>
+
       )}
 
     </div>
