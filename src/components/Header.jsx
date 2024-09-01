@@ -23,8 +23,8 @@ const Header = ({ city, locationSuggestions, handleSearchInput, handleSearchSubm
                 handleSelectLocation={handleSelectLocation}
             />
             <div className="unit-buttons">
-                <button className="celsiusBtn" onClick={changeUnitCelsius}>°C</button>
-                <button className="fahrenheiBtn" onClick={changeUnitFahrenheit}>°F</button>
+                <button className="celsius-btn" onClick={changeUnitCelsius}>°C</button>
+                <button className="fahrenheit-btn" onClick={changeUnitFahrenheit}>°F</button>
             </div>
         </div>
     );
