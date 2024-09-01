@@ -1,9 +1,8 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 
-const Header = ({ city, locationSuggestions, handleSearchInput, handleSearchSubmit, handleSelectLocation }) => {
-    const empty = () => {
-    };
+const Header = ({ city, locationSuggestions, handleSearchInput, handleSearchSubmit, handleSelectLocation, toggleUnit }) => {
+
 
     return (
         <div className="header">
@@ -15,8 +14,8 @@ const Header = ({ city, locationSuggestions, handleSearchInput, handleSearchSubm
                 handleSubmit={handleSearchSubmit}
                 handleSelectLocation={handleSelectLocation}
             />
-            <button className="celsiusBtn" onClick={empty}>°C</button>
-            <button className="fahrenheiBtn" onClick={empty}>°F</button>
+            <button className="celsiusBtn" onClick={toggleUnit}>°C</button>
+            <button className="fahrenheiBtn" onClick={toggleUnit}>°F</button>
         </div>
     );
 };

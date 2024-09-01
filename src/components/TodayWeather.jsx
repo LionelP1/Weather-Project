@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TodayWeather = ({ weatherData }) => {
+const TodayWeather = ({ weatherData, unit }) => {
   const {
     weather,
     main: { temp, feels_like },
@@ -8,10 +8,16 @@ const TodayWeather = ({ weatherData }) => {
     name
   } = weatherData;
 
-  // const {
-  //   weather,
-  //   main: { temp, feels_like },
-  // } = weatherData;
+  const convertTemp = (celsiusTemp, toUnit) => {
+    if (toUnit === 'F') {
+      return (celsiusTemp * 9/5) + 32;
+    } else {
+      return celsiusTemp;
+    }
+  };
+
+  const tempInUnit = convertTemp(temp, unit).toFixed(1);
+  const feelsLikeInUnit = convertTemp(feels_like, unit).toFixed(1);
 
 
   const now = new Date();
@@ -36,8 +42,8 @@ const TodayWeather = ({ weatherData }) => {
         />
       </div>
 
-      <p className="temperature">{temp.toFixed(1)}</p>
-      <p className="feelsTemp">Feels like: {feels_like.toFixed(1)}</p>
+      <p className="temperature">{tempInUnit}°{unit}</p>
+      <p className="feelsTemp">Feels like: {feelsLikeInUnit}°{unit}</p>
       <p className="location">{name}, {country}</p>
       <p className="date">{date}</p>
       <p className="time">{time}</p>
