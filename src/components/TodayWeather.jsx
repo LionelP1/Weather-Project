@@ -13,14 +13,11 @@ const TodayWeather = ({ weatherData }) => {
     day: 'numeric'
   });
   
-
   const time = now.toLocaleTimeString([], {
     hour: 'numeric',
     minute: '2-digit',
     hour12: true
   });
-
-
 
   return (
     <div className="weather-container">
