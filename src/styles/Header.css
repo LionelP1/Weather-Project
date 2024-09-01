@@ -1,22 +1,61 @@
-
-
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    text-align: center;
     color: #ecf0f1;
-    background-color: var(--darker-black);
+    padding: 17px;
+    background-color: var(--darker-black); 
+}
+
+.logo-title-wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .title {
     margin: 0;
     padding: 0;
-    font-size :30px;
+    font-size: 28px;
+    color: #ecf0f1;
+    font-weight: bold;
+    text-align: center;
 }
 
 .logo {
     width: 50px;
     height: auto;
-    margin-left:20px;
+    margin: 0 20px;
 }
+
+.unit-buttons {
+    display: flex;
+    gap: 10px;
+    margin-right: 10px
+}
+
+.celsius-btn,
+.fahrenheit-btn {
+    background-color: #545454;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.celsius-btn:hover,
+.fahrenheit-btn:hover {
+    background-color: #848484; 
+}
+
+.celsius-btn:focus,
+.fahrenheit-btn:focus {
+    outline: 2px solid #ecf0f1;
+    outline-offset: 2px;
+}
+
+
+

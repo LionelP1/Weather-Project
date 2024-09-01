@@ -13,8 +13,10 @@ const Header = ({ city, locationSuggestions, handleSearchInput, handleSearchSubm
 
     return (
         <div className="header">
-            <img className="logo" alt="Logo" />
-            <h1 className="title">Weather Project</h1>
+            <div className="logo-title-wrapper">
+                <img className="logo" alt="Logo" />
+                <h1 className="title">Weather Project</h1>
+            </div>
             <SearchBar 
                 city={city}
                 locationSuggestions={locationSuggestions}
