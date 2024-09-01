@@ -1,6 +1,5 @@
 const API_KEY = import.meta.env.VITE_OPEN_WEATHER_API_KEY;
 const URL = 'https://api.openweathermap.org/data/2.5';
-//https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
 
 // Fetch current weather
 const fetchWeatherWithCity = async (city) => {
