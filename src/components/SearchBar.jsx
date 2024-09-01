@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/SearchBar.css';
 
 const SearchBar = ({ city, locationSuggestions, handleSubmit, handleSearchInput, handleSelectLocation }) => {
   
@@ -8,7 +9,7 @@ const SearchBar = ({ city, locationSuggestions, handleSubmit, handleSearchInput,
   };
 
   return (
-    <div>
+    <div className="search-container">
       <div className="searchBar">
         <input 
           type="text" 
