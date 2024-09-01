@@ -1,3 +1,7 @@
+.search-container {
+    position: relative; 
+}
+
 .searchBar {
     display: flex;
     align-items: center;
@@ -14,9 +18,8 @@
     color: #ecf0f1;
     background-color: var(--lighter-black);
     border-radius: 5px 0 0 5px;
-    width: 300px;
+    width: 400px;
 }
-
 
 .searchBar button {
     background-color: #545454;
@@ -33,14 +36,18 @@
     background-color: #848484;
 }
 
-
 .locationList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     list-style: none;
     padding: 0;
-    margin: 10px 0 0;
+    margin: 0;
     background-color: var(--lighter-black);
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
 }
 
 .locationElement {
