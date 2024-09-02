@@ -4,9 +4,11 @@
     justify-content: space-between;
     text-align: center;
     color: #ecf0f1;
-    padding: 10px;
-    background-color: var(--darker-black); 
+    background-color: var(--darker-black);
     border-bottom: 1px solid #444;
+    flex-wrap: wrap;
+    padding: 0 50px;
+    position: relative;
 }
 
 .logo-title-wrapper {
@@ -23,7 +25,7 @@
 }
 
 .logo {
-    margin: 0 20px;
+    margin-right: 20px;
     padding: 0;
     font-size: 38px;
 }
@@ -31,7 +33,6 @@
 .unit-buttons {
     display: flex;
     gap: 10px;
-    margin-right: 10px
 }
 
 .celsius-btn,
@@ -57,7 +58,15 @@
     outline-offset: 2px;
 }
 
+@media (max-width: 1150px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        padding-bottom:25px;
+    }
 
-
-
-
+    .unit-buttons {
+        margin-bottom: 20px;
+    }
+}

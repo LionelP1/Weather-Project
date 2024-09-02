@@ -60,3 +60,12 @@
 .locationElement:hover {
     background-color: #444444;
 }
+
+
+@media (max-width: 650px) {
+    .search-container {
+        width:90%;
+    }
+}
+
+

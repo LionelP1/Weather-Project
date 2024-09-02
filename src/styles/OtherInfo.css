@@ -30,9 +30,6 @@
 .pressure-info,
 .humidity-info,
 .visibility-info {
-    /* flex: 1; */
-    /* max-width: 300px;
-    min-width: 230px; */
     width: 280px;
     margin: 10px;
     padding: 65px 0;
@@ -51,8 +48,4 @@
 .humidity-info,
 .visibility-info {
     border: 1px solid #444;
-}
-  
-@media (max-width: 800px) {
-
 }

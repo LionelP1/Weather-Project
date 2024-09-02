@@ -17,17 +17,17 @@ const Header = ({ city, locationSuggestions, handleSearchInput, handleSearchSubm
                 <div className="logo">🌤️</div>
                 <h1 className="title">Weather Project</h1>
             </div>
-            <SearchBar 
+            <div className="unit-buttons">
+                <button className="celsius-btn" onClick={changeUnitCelsius}>°C</button>
+                <button className="fahrenheit-btn" onClick={changeUnitFahrenheit}>°F</button>
+            </div>
+            <SearchBar
                 city={city}
                 locationSuggestions={locationSuggestions}
                 handleSearchInput={handleSearchInput}
                 handleSubmit={handleSearchSubmit}
                 handleSelectLocation={handleSelectLocation}
             />
-            <div className="unit-buttons">
-                <button className="celsius-btn" onClick={changeUnitCelsius}>°C</button>
-                <button className="fahrenheit-btn" onClick={changeUnitFahrenheit}>°F</button>
-            </div>
         </div>
     );
 };
