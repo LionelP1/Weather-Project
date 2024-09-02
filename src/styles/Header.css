@@ -6,6 +6,7 @@
     color: #ecf0f1;
     padding: 17px;
     background-color: var(--darker-black); 
+    border-bottom: 1px solid #444;
 }
 
 .logo-title-wrapper {

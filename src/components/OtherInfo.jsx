@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/OtherInfo.css';
 
 const OtherInfo = ({ weatherData }) => {
   const { wind, main, visibility } = weatherData;
@@ -15,21 +16,21 @@ const OtherInfo = ({ weatherData }) => {
   }
 
   return (
-    <div className="infoContainer">
-      <div className="windInfo">
-        <h3 className="infoTitle">Wind</h3>
+    <div className="info-container">
+      <div className="wind-info">
+        <h3 className="info-title">Wind</h3>
         <p className="info"> {(wind.speed * 3.6).toFixed(1)} km/h {getWindDirection(wind.deg)}</p> 
       </div>
-      <div className="pressureInfo">
-        <h3 className="infoTitle">Pressure</h3>
+      <div className="pressure-info">
+        <h3 className="info-title">Pressure</h3>
         <p className="info">{(0.1 * main.pressure).toFixed(1)} kPa</p> {/* Pressure in hectopascals */}
       </div>
-      <div className="humidityInfo">
-        <h3 className="infoTitle">Humidity</h3>
+      <div className="humidity-info">
+        <h3 className="info-title">Humidity</h3>
         <p className="info">{main.humidity} %</p>
       </div>
-      <div className="visibilityInfo">
-        <h3 className="infoTitle">Visibility</h3>
+      <div className="visibility-info">
+        <h3 className="info-title">Visibility</h3>
         <p className="info">{(visibility / 1000).toFixed(1)} km</p> {/* Convert meters to kilometers */}
       </div>
     </div>

@@ -1,0 +1,92 @@
+/* .info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1000px;
+    margin: 40px auto;
+    font-weight: bold;
+}
+  
+.info-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
+.info {
+    font-size: 23px;
+    margin: 5px 0;
+    text-align: center;
+}
+  
+.wind-info,
+.pressure-info,
+.humidity-info,
+.visibility-info {
+    margin: 0 10px;
+    flex: 1;
+    max-width: 200px;
+    background-color: var(--darker-black);
+}
+  
+.info-container div {
+    text-align: center;
+}
+   */
+
+
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1100px;
+    margin: 40px auto;
+    font-weight: bold;
+}
+  
+  .info-title {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .info {
+    font-size: 25px;
+    margin: 5px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .wind-info,
+  .pressure-info,
+  .humidity-info,
+  .visibility-info {
+    flex: 1;
+    max-width: 250px;
+    margin: 0 10px;
+    padding: 40px 0;
+    background-color: var(--darker-black);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .info-container div {
+    text-align: center;
+  }
+  
+  /* Optional: Add a subtle border or outline to each box */
+  .wind-info,
+  .pressure-info,
+  .humidity-info,
+  .visibility-info {
+    border: 1px solid #444;
+  }
+  
+  
