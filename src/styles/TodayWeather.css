@@ -1,0 +1,138 @@
+/* .weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--darker-black);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    max-width: 300px;
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+
+  }
+  
+  .weather-icon {
+    margin-bottom: 15px;
+  }
+  
+  .weather-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .temperature {
+    font-size: 2.5rem;
+    margin: 5px 0;
+  }
+  
+  .feels-temp {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .location {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .date,
+  .time {
+    font-size: 1rem;
+    margin: 2px 0;
+  }
+   */
+
+
+/* 
+
+   .weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darker-black);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    max-width: 400px;
+    margin: 40px auto; 
+    font-weight:bold;
+  }
+  
+  .weather-icon {
+    margin-bottom: 20px;
+  }
+  
+  .weather-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .temperature {
+    font-size: 3.5rem;
+    margin: 10px 0;
+  }
+  
+  .feels-temp {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .location {
+    font-size: 1.8rem; 
+    margin: 15px 0;
+  }
+  
+  .date,
+  .time {
+    font-size: 1.3rem;
+    margin: 5px 0;
+  }
+   */
+
+
+
+   .weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darker-black);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    max-width: 400px;
+    margin: 40px auto;
+    font-weight: bold;
+  }
+  
+  .weather-img {
+    width: 170px;
+    height: auto;
+  }
+  
+  .temperature {
+    font-size: 56px; /* Converted 3.5rem to pixels */
+    margin: 10px 0;
+  }
+  
+  .feels-temp {
+    font-size: 24px; /* Converted 1.5rem to pixels */
+    margin: 10px 0;
+  }
+  
+  .location {
+    font-size: 29px; /* Converted 1.8rem to pixels */
+    margin: 15px 0;
+  }
+  
+  .date,
+  .time {
+    font-size: 21px; /* Converted 1.3rem to pixels */
+    margin: 5px 0;
+  }
+  

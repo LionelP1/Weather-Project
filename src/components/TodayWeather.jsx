@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/TodayWeather.css';
 
 const TodayWeather = ({ weatherData, unit }) => {
   const {
@@ -35,15 +36,13 @@ const TodayWeather = ({ weatherData, unit }) => {
 
   return (
     <div className="weather-container">
-      <div className="weatherIcon">
-        <img
-          src={`http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
-          alt={weather[0].description}
-        />
-      </div>
+      <img className="weather-img" 
+        src={`http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
+        alt={weather[0].description}
+      />
 
       <p className="temperature">{tempInUnit}°{unit}</p>
-      <p className="feelsTemp">Feels like: {feelsLikeInUnit}°{unit}</p>
+      <p className="feels-temp">Feels like: {feelsLikeInUnit}°{unit}</p>
       <p className="location">{name}, {country}</p>
       <p className="date">{date}</p>
       <p className="time">{time}</p>
