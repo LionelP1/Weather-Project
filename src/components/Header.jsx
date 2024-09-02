@@ -14,7 +14,7 @@ const Header = ({ city, locationSuggestions, handleSearchInput, handleSearchSubm
     return (
         <div className="header">
             <div className="logo-title-wrapper">
-                <img className="logo" alt="Logo" />
+                <div className="logo">🌤️</div>
                 <h1 className="title">Weather Project</h1>
             </div>
             <SearchBar 
